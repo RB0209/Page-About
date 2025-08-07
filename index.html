@@ -2,148 +2,153 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>CARE Foundation – About Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARE Foundation - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .team-tile-content {
+      .expandable {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease;
+        transition: max-height 0.4s ease-in-out;
       }
-      .team-tile.expanded .team-tile-content {
-        max-height: 200px;
+      .expanded {
+        max-height: 300px;
+      }
+      .scrolling-wrapper::-webkit-scrollbar {
+        display: none;
       }
     </style>
   </head>
-
-  <body class="bg-white text-gray-800">
-    <!-- About Us Section -->
-    <section class="flex flex-col md:flex-row p-6 items-center gap-8 bg-white">
-      <img src="https://via.placeholder.com/300x200.png?text=CARE+Logo" alt="CARE Logo" class="w-full md:w-1/3" />
-      <div class="md:w-2/3">
-        <h2 class="text-3xl font-bold text-[#38b6ff] mb-4">About Us</h2>
-        <p class="text-lg">
-          Founded in Mumbai in 2011 by a group of passionate youngsters, CARE Foundation has emerged as a beacon of hope and change in the realm of social awareness, education, and women empowerment. This Non-governmental organization (NGO) has dedicated itself to addressing pressing societal issues through innovative programs and community engagement.
-        </p>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- About Us -->
+    <section class="py-12 px-4 md:px-20 bg-white">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <img src="https://via.placeholder.com/200" alt="CARE Logo" class="w-48 h-48 object-contain" />
+        <div class="bg-[#38b6ff] text-white p-6 rounded-2xl shadow-lg w-full hover:shadow-xl transition duration-300">
+          <h2 class="text-3xl font-bold mb-4">About Us</h2>
+          <p class="leading-relaxed">
+            Founded in Mumbai in 2011 by a group of passionate youngsters, CARE Foundation has emerged as a beacon of hope and change in the realm of social awareness, education, and women empowerment. This Non-governmental organization (NGO) has dedicated itself to addressing pressing societal issues through innovative programs and community engagement.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Mission & Vision -->
-    <section class="p-6 bg-gray-50">
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition border-t-4 border-[#38b6ff]">
+    <section class="py-12 px-4 md:px-20">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white border-2 border-[#38b6ff] p-6 rounded-xl hover:shadow-lg transition">
           <h3 class="text-2xl font-semibold text-[#38b6ff] mb-2">Our Mission</h3>
-          <p>To empower underprivileged communities through education, healthcare, and social upliftment programs that foster sustainable development.</p>
+          <p>To inspire positive social change through sustainable programs focused on education, empowerment, and equality.</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition border-t-4 border-[#38b6ff]">
+        <div class="bg-white border-2 border-[#38b6ff] p-6 rounded-xl hover:shadow-lg transition">
           <h3 class="text-2xl font-semibold text-[#38b6ff] mb-2">Our Vision</h3>
-          <p>To build a just, equitable, and compassionate society where every individual has access to basic rights and opportunities to flourish.</p>
+          <p>To build a society where every individual lives with dignity, purpose, and opportunity.</p>
         </div>
       </div>
     </section>
 
-    <!-- Impact Statistics -->
-    <section class="p-6 text-center bg-white">
-      <h3 class="text-3xl font-bold text-[#38b6ff] mb-6">Our Impact</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="hover:scale-105 transform transition p-4 bg-gray-100 rounded-lg">
-          <p class="text-4xl font-bold text-[#38b6ff]">50K+</p>
+    <!-- Impact Stats -->
+    <section class="py-12 px-4 md:px-20 bg-[#f1f9ff]">
+      <h2 class="text-3xl font-bold text-center text-[#38b6ff] mb-10">Our Impact</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <h3 class="text-4xl font-bold text-[#38b6ff] counter" data-target="1200">0</h3>
           <p>Meals Served</p>
         </div>
-        <div class="hover:scale-105 transform transition p-4 bg-gray-100 rounded-lg">
-          <p class="text-4xl font-bold text-[#38b6ff]">10K+</p>
-          <p>Lives Touched</p>
-        </div>
-        <div class="hover:scale-105 transform transition p-4 bg-gray-100 rounded-lg">
-          <p class="text-4xl font-bold text-[#38b6ff]">1.5K</p>
+        <div>
+          <h3 class="text-4xl font-bold text-[#38b6ff] counter" data-target="500">0</h3>
           <p>Women Empowered</p>
         </div>
-        <div class="hover:scale-105 transform transition p-4 bg-gray-100 rounded-lg">
-          <p class="text-4xl font-bold text-[#38b6ff]">100+</p>
-          <p>Volunteers</p>
+        <div>
+          <h3 class="text-4xl font-bold text-[#38b6ff] counter" data-target="300">0</h3>
+          <p>Children Educated</p>
         </div>
+        <div>
+          <h3 class="text-4xl font-bold text-[#38b6ff] counter" data-target="100">0</h3>
+          <p>Communities Reached</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="py-12 px-4 md:px-20">
+      <div class="bg-[#38b6ff] text-white p-10 rounded-2xl text-center hover:shadow-xl transition">
+        <h2 class="text-3xl font-bold mb-4">Join Us in Making a Difference</h2>
+        <p class="mb-6">Become a part of the CARE movement and help create meaningful change in society.</p>
+        <a href="#" class="bg-white text-[#38b6ff] font-semibold py-2 px-6 rounded-full shadow hover:bg-gray-100 transition">Get Involved</a>
       </div>
     </section>
 
     <!-- Media Scroller -->
-    <section class="bg-gray-100 py-6">
-      <h3 class="text-3xl font-bold text-center text-[#38b6ff] mb-4">Media Highlights</h3>
-      <div class="overflow-x-auto whitespace-nowrap px-6">
-        <img src="https://via.placeholder.com/250x150?text=Event+1" class="inline-block mx-2 rounded-lg shadow-md hover:scale-105 transition" />
-        <img src="https://via.placeholder.com/250x150?text=Event+2" class="inline-block mx-2 rounded-lg shadow-md hover:scale-105 transition" />
-        <img src="https://via.placeholder.com/250x150?text=Event+3" class="inline-block mx-2 rounded-lg shadow-md hover:scale-105 transition" />
-        <img src="https://via.placeholder.com/250x150?text=Event+4" class="inline-block mx-2 rounded-lg shadow-md hover:scale-105 transition" />
+    <section class="py-12 px-4 md:px-20 bg-[#f1f9ff]">
+      <h2 class="text-3xl font-bold text-center text-[#38b6ff] mb-6">Our Work in Action</h2>
+      <div class="scrolling-wrapper flex space-x-4 overflow-x-auto pb-4">
+        <img src="https://via.placeholder.com/300x200" class="rounded-lg shadow-lg hover:scale-105 transition" />
+        <img src="https://via.placeholder.com/300x200" class="rounded-lg shadow-lg hover:scale-105 transition" />
+        <img src="https://via.placeholder.com/300x200" class="rounded-lg shadow-lg hover:scale-105 transition" />
+        <img src="https://via.placeholder.com/300x200" class="rounded-lg shadow-lg hover:scale-105 transition" />
       </div>
     </section>
 
-    <!-- Join Us Section -->
-    <section class="bg-[#38b6ff] text-white p-10 text-center">
-      <h3 class="text-3xl font-bold mb-4">Join Our Movement</h3>
-      <p class="text-lg mb-6">Be a part of the change. Volunteer or support our mission today!</p>
-      <a href="#" class="bg-white text-[#38b6ff] font-semibold py-2 px-4 rounded-full hover:bg-gray-200 transition">Get Involved</a>
-    </section>
-
-    <!-- Donation Section -->
-    <section class="p-6 bg-gray-50 text-center">
-      <h3 class="text-3xl font-bold text-[#38b6ff] mb-8">How Can You Support Us?</h3>
+    <!-- Our Team -->
+    <section class="py-12 px-4 md:px-20">
+      <h2 class="text-3xl font-bold text-center text-[#38b6ff] mb-10">Our Team</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition border-t-4 border-[#38b6ff]">
-          <h4 class="text-xl font-bold mb-2">Monetary Donation</h4>
-          <p class="mb-4">Support our cause by contributing funds to our ongoing projects and initiatives.</p>
-          <button class="bg-[#38b6ff] text-white px-4 py-2 rounded hover:bg-blue-600 transition">Donate</button>
+        <!-- Team Member -->
+        <div onclick="toggleExpand(this)" class="cursor-pointer bg-white border border-[#38b6ff] rounded-2xl p-4 hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/150" class="w-32 h-32 object-cover rounded-full mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-center text-[#38b6ff]">Aniket Ghanshyam Bhankal</h3>
+          <p class="text-center text-sm">Chairman</p>
+          <div class="expandable mt-3 text-sm text-gray-600 text-center">
+            A visionary leader dedicated to community development and youth empowerment.
+          </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition border-t-4 border-[#38b6ff]">
-          <h4 class="text-xl font-bold mb-2">Volunteer</h4>
-          <p class="mb-4">Lend your time and skills to help us drive impactful change in communities.</p>
-          <button class="bg-[#38b6ff] text-white px-4 py-2 rounded hover:bg-blue-600 transition">Join Us</button>
+        <!-- Team Member -->
+        <div onclick="toggleExpand(this)" class="cursor-pointer bg-white border border-[#38b6ff] rounded-2xl p-4 hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/150" class="w-32 h-32 object-cover rounded-full mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-center text-[#38b6ff]">Bhavana Jain</h3>
+          <p class="text-center text-sm">Secretary</p>
+          <div class="expandable mt-3 text-sm text-gray-600 text-center">
+            She ensures smooth operations and leads several women-focused initiatives.
+          </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition border-t-4 border-[#38b6ff]">
-          <h4 class="text-xl font-bold mb-2">Sponsor</h4>
-          <p class="mb-4">Partner with us as a sponsor and make a lasting difference together.</p>
-          <button class="bg-[#38b6ff] text-white px-4 py-2 rounded hover:bg-blue-600 transition">Sponsor</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Team Section -->
-    <section class="bg-white p-6">
-      <h3 class="text-3xl font-bold text-center text-[#38b6ff] mb-8">Our Team</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Member 1 -->
-        <div onclick="toggleTeam(this)" class="team-tile bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition">
-          <img src="https://via.placeholder.com/150x150?text=Aniket" alt="Aniket" class="rounded-full mx-auto mb-4">
-          <h4 class="text-xl font-bold text-center text-[#38b6ff]">Aniket Ghanshyam Bhankal</h4>
-          <p class="text-center">Chairman</p>
-          <div class="team-tile-content text-sm mt-2 text-gray-600">A dynamic leader and visionary driving CARE's core values since inception.</div>
-        </div>
-
-        <!-- Member 2 -->
-        <div onclick="toggleTeam(this)" class="team-tile bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition">
-          <img src="https://via.placeholder.com/150x150?text=Bhavana" alt="Bhavana" class="rounded-full mx-auto mb-4">
-          <h4 class="text-xl font-bold text-center text-[#38b6ff]">Bhavana Jain</h4>
-          <p class="text-center">Secretary</p>
-          <div class="team-tile-content text-sm mt-2 text-gray-600">Handles communication and community engagement with dedication.</div>
-        </div>
-
-        <!-- Member 3 -->
-        <div onclick="toggleTeam(this)" class="team-tile bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition">
-          <img src="https://via.placeholder.com/150x150?text=Ghanshyam" alt="Ghanshyam" class="rounded-full mx-auto mb-4">
-          <h4 class="text-xl font-bold text-center text-[#38b6ff]">Ghanshyam Mahadeo Bhankal</h4>
-          <p class="text-center">Treasurer</p>
-          <div class="team-tile-content text-sm mt-2 text-gray-600">Ensures financial integrity and transparency across all activities.</div>
+        <!-- Team Member -->
+        <div onclick="toggleExpand(this)" class="cursor-pointer bg-white border border-[#38b6ff] rounded-2xl p-4 hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/150" class="w-32 h-32 object-cover rounded-full mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-center text-[#38b6ff]">Ghanshyam Mahadeo Bhankal</h3>
+          <p class="text-center text-sm">Treasurer</p>
+          <div class="expandable mt-3 text-sm text-gray-600 text-center">
+            Manages funds with transparency and accountability.
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-sm text-gray-500 py-4 bg-gray-100">
-      &copy; 2025 CARE Foundation. All rights reserved.
-    </footer>
-
+    <!-- JS: Counters & Expand -->
     <script>
-      function toggleTeam(el) {
-        el.classList.toggle("expanded");
+      // Stat Counter Animation
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = target / 100;
+
+          if (count < target) {
+            counter.innerText = `${Math.ceil(count + increment)}`;
+            setTimeout(updateCounter, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCounter();
+      });
+
+      // Expand on click
+      function toggleExpand(el) {
+        const content = el.querySelector('.expandable');
+        content.classList.toggle('expanded');
       }
     </script>
   </body>
