@@ -3,82 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - CARE Foundation</title>
+  <title>About Us | CARE Foundation</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .expand-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
-    .expanded .expand-content {
-      max-height: 200px; /* adjust as needed */
+    .scroll-loop {
+      animation: scroll 30s linear infinite;
     }
   </style>
 </head>
 <body class="bg-white text-gray-800">
 
-  <!-- Hero Section (Short height) -->
-  <section class="w-full bg-[#38b6ff] py-10 text-white">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-      <img src="https://via.placeholder.com/120x120" alt="CARE Foundation Logo" class="w-32 h-32 mb-4 md:mb-0"/>
-      <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg w-full md:w-3/4">
-        <h2 class="text-2xl font-bold mb-2 text-[#38b6ff]">About Us</h2>
-        <p>
-          Founded in Mumbai in 2011 by a group of passionate youngsters, CARE Foundation has emerged as a beacon of hope and change in the realm of social awareness, education, and women empowerment. This Non-governmental organization (NGO) has dedicated itself to addressing pressing societal issues through innovative programs and community engagement.
-        </p>
-      </div>
+  <!-- Hero Section -->
+  <section class="bg-[#38b6ff] text-white py-12 px-4 text-center">
+    <h1 class="text-4xl font-bold">About CARE Foundation</h1>
+    <p class="text-lg mt-2">Empowering communities since 2011</p>
+  </section>
+
+  <!-- About Tile -->
+  <section class="flex flex-col md:flex-row items-center justify-center py-10 px-6 max-w-6xl mx-auto">
+    <img src="images/logo.png" alt="NGO Logo" class="w-40 h-40 object-contain mb-6 md:mb-0 md:mr-10" />
+    <div class="bg-white border-2 border-[#38b6ff] p-6 rounded-2xl shadow-lg w-full max-w-3xl">
+      <p class="text-lg leading-relaxed">
+        Founded in Mumbai in 2011 by a group of passionate youngsters, CARE Foundation has emerged as a beacon of hope and change in the realm of social awareness, education, and women empowerment. This Non-governmental organization (NGO) has dedicated itself to addressing pressing societal issues through innovative programs and community engagement.
+      </p>
     </div>
   </section>
 
   <!-- Team Section -->
-  <section class="py-12 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-10 text-[#38b6ff]">Meet Our Team</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-        
-        <!-- Team Member 1 -->
-        <div class="bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300 border border-[#38b6ff] cursor-pointer team-card">
-          <img src="https://via.placeholder.com/300x200" alt="Aniket Ghanshyam Bhankal" class="rounded-md w-full h-48 object-cover mb-4"/>
-          <h4 class="text-xl font-semibold text-[#38b6ff]">Aniket Ghanshyam Bhankal</h4>
-          <p class="text-sm font-medium">Chairman</p>
-          <div class="expand-content mt-2 text-sm text-gray-600">
-            <p>Visionary leader focused on empowering youth and uplifting underprivileged communities.</p>
-          </div>
-        </div>
-
-        <!-- Team Member 2 -->
-        <div class="bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300 border border-[#38b6ff] cursor-pointer team-card">
-          <img src="https://via.placeholder.com/300x200" alt="Bhavana Jain" class="rounded-md w-full h-48 object-cover mb-4"/>
-          <h4 class="text-xl font-semibold text-[#38b6ff]">Bhavana Jain</h4>
-          <p class="text-sm font-medium">Secretary</p>
-          <div class="expand-content mt-2 text-sm text-gray-600">
-            <p>Driving social programs and women empowerment through grassroots connections.</p>
-          </div>
-        </div>
-
-        <!-- Team Member 3 -->
-        <div class="bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300 border border-[#38b6ff] cursor-pointer team-card">
-          <img src="https://via.placeholder.com/300x200" alt="Ghanshyam Mahadeo Bhankal" class="rounded-md w-full h-48 object-cover mb-4"/>
-          <h4 class="text-xl font-semibold text-[#38b6ff]">Ghanshyam Mahadeo Bhankal</h4>
-          <p class="text-sm font-medium">Treasurer</p>
-          <div class="expand-content mt-2 text-sm text-gray-600">
-            <p>Ensures transparency, financial stability, and accountability in all our initiatives.</p>
-          </div>
-        </div>
-
+  <section class="bg-gray-100 py-12 px-6">
+    <h2 class="text-3xl font-bold text-center mb-8 text-[#38b6ff]">Our Team</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <!-- Member Tile -->
+      <div class="bg-white rounded-xl p-6 shadow-xl hover:scale-105 transition transform duration-300 border-t-4 border-[#38b6ff]">
+        <img src="images/team1.png" alt="Chairman" class="w-full h-48 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Aniket Ghanshyam Bhankal</h3>
+        <p class="text-sm text-[#38b6ff] font-medium mb-2">Chairman</p>
+        <details class="text-sm">
+          <summary class="cursor-pointer text-[#38b6ff] underline">Read More</summary>
+          <p class="mt-2">A visionary leader driving impact through education and empowerment.</p>
+        </details>
+      </div>
+      <!-- Member 2 -->
+      <div class="bg-white rounded-xl p-6 shadow-xl hover:scale-105 transition transform duration-300 border-t-4 border-[#38b6ff]">
+        <img src="images/team2.png" alt="Secretary" class="w-full h-48 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Bhavana Jain</h3>
+        <p class="text-sm text-[#38b6ff] font-medium mb-2">Secretary</p>
+        <details class="text-sm">
+          <summary class="cursor-pointer text-[#38b6ff] underline">Read More</summary>
+          <p class="mt-2">Dedicated to community upliftment and women’s rights advocacy.</p>
+        </details>
+      </div>
+      <!-- Member 3 -->
+      <div class="bg-white rounded-xl p-6 shadow-xl hover:scale-105 transition transform duration-300 border-t-4 border-[#38b6ff]">
+        <img src="images/team3.png" alt="Treasurer" class="w-full h-48 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Ghanshyam Mahadeo Bhankal</h3>
+        <p class="text-sm text-[#38b6ff] font-medium mb-2">Treasurer</p>
+        <details class="text-sm">
+          <summary class="cursor-pointer text-[#38b6ff] underline">Read More</summary>
+          <p class="mt-2">Ensures financial transparency and growth of the foundation.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- JS for Expand Effect -->
-  <script>
-    document.querySelectorAll('.team-card').forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('expanded');
-      });
-    });
-  </script>
+  <!-- Mission & Vision -->
+  <section class="py-12 px-6 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-[#38b6ff] mb-6">Mission & Vision</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white shadow-md p-6 rounded-lg border-l-4 border-[#38b6ff]">
+        <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+        <p>To empower underprivileged communities by fostering education, social awareness, and women empowerment through sustainable initiatives.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-lg border-l-4 border-[#38b6ff]">
+        <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+        <p>To build an inclusive society where every individual can live with dignity, purpose, and access to opportunity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Stats -->
+  <section class="bg-[#38b6ff] text-white py-12 px-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Our Impact</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center max-w-6xl mx-auto">
+      <div>
+        <p class="text-4xl font-bold animate-pulse">10K+</p>
+        <p>Meals Served</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold animate-bounce">500+</p>
+        <p>Women Empowered</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold animate-pulse">150+</p>
+        <p>Educational Drives</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold animate-bounce">50+</p>
+        <p>Volunteers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us Call to Action -->
+  <section class="py-12 px-6 bg-white text-center">
+    <h2 class="text-3xl font-bold text-[#38b6ff] mb-4">Join Us</h2>
+    <p class="text-lg mb-6">Be a part of our mission to transform lives and uplift communities.</p>
+    <a href="#" class="bg-[#38b6ff] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-500 transition">Get Involved</a>
+  </section>
+
+  <!-- Media Scroller -->
+  <section class="overflow-hidden py-6 bg-gray-100">
+    <div class="flex gap-6 scroll-loop w-[200%]">
+      <img src="images/media1.jpg" class="h-32 rounded-xl shadow-md" />
+      <img src="images/media2.jpg" class="h-32 rounded-xl shadow-md" />
+      <img src="images/media3.jpg" class="h-32 rounded-xl shadow-md" />
+      <img src="images/media1.jpg" class="h-32 rounded-xl shadow-md" />
+      <img src="images/media2.jpg" class="h-32 rounded-xl shadow-md" />
+      <img src="images/media3.jpg" class="h-32 rounded-xl shadow-md" />
+    </div>
+  </section>
 
 </body>
 </html>
