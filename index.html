@@ -1,131 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | CARE Foundation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .scroll-loop {
-      animation: scroll 30s linear infinite;
-    }
-  </style>
-</head>
-<body class="bg-white text-gray-800">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CARE Foundation – About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <style>
+      .team-tile-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+      .team-tile.expanded .team-tile-content {
+        max-height: 200px;
+      }
+    </style>
+  </head>
 
-  <!-- Hero Section -->
-  <section class="bg-[#38b6ff] text-white py-12 px-4 text-center">
-    <h1 class="text-4xl font-bold">About CARE Foundation</h1>
-    <p class="text-lg mt-2">Empowering communities since 2011</p>
-  </section>
+  <body class="bg-white text-gray-800">
+    <!-- About Us Section -->
+    <section class="flex flex-col md:flex-row p-6 items-center gap-8 bg-white">
+      <img src="https://via.placeholder.com/300x200.png?text=CARE+Logo" alt="CARE Logo" class="w-full md:w-1/3" />
+      <div class="md:w-2/3">
+        <h2 class="text-3xl font-bold text-[#38b6ff] mb-4">About Us</h2>
+        <p class="text-lg">
+          Founded in Mumbai in 2011 by a group of passionate youngsters, CARE Foundation has emerged as a beacon of hope and change in the realm of social awareness, education, and women empowerment. This Non-governmental organization (NGO) has dedicated itself to addressing pressing societal issues through innovative programs and community engagement.
+        </p>
+      </div>
+    </section>
 
-  <!-- About Tile -->
-  <section class="flex flex-col md:flex-row items-center justify-center py-10 px-6 max-w-6xl mx-auto">
-    <img src="images/logo.png" alt="NGO Logo" class="w-40 h-40 object-contain mb-6 md:mb-0 md:mr-10" />
-    <div class="bg-white border-2 border-[#38b6ff] p-6 rounded-2xl shadow-lg w-full max-w-3xl">
-      <p class="text-lg leading-relaxed">
-        Founded in Mumbai in 2011 by a group of passionate youngsters, CARE Foundation has emerged as a beacon of hope and change in the realm of social awareness, education, and women empowerment. This Non-governmental organization (NGO) has dedicated itself to addressing pressing societal issues through innovative programs and community engagement.
-      </p>
-    </div>
-  </section>
+    <!-- Mission & Vision -->
+    <section class="p-6 bg-gray-50">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition border-t-4 border-[#38b6ff]">
+          <h3 class="text-2xl font-semibold text-[#38b6ff] mb-2">Our Mission</h3>
+          <p>To empower underprivileged communities through education, healthcare, and social upliftment programs that foster sustainable development.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition border-t-4 border-[#38b6ff]">
+          <h3 class="text-2xl font-semibold text-[#38b6ff] mb-2">Our Vision</h3>
+          <p>To build a just, equitable, and compassionate society where every individual has access to basic rights and opportunities to flourish.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Team Section -->
-  <section class="bg-gray-100 py-12 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8 text-[#38b6ff]">Our Team</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <!-- Member Tile -->
-      <div class="bg-white rounded-xl p-6 shadow-xl hover:scale-105 transition transform duration-300 border-t-4 border-[#38b6ff]">
-        <img src="images/team1.png" alt="Chairman" class="w-full h-48 object-cover rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold">Aniket Ghanshyam Bhankal</h3>
-        <p class="text-sm text-[#38b6ff] font-medium mb-2">Chairman</p>
-        <details class="text-sm">
-          <summary class="cursor-pointer text-[#38b6ff] underline">Read More</summary>
-          <p class="mt-2">A visionary leader driving impact through education and empowerment.</p>
-        </details>
+    <!-- Impact Statistics -->
+    <section class="p-6 text-center bg-white">
+      <h3 class="text-3xl font-bold text-[#38b6ff] mb-6">Our Impact</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="hover:scale-105 transform transition p-4 bg-gray-100 rounded-lg">
+          <p class="text-4xl font-bold text-[#38b6ff]">50K+</p>
+          <p>Meals Served</p>
+        </div>
+        <div class="hover:scale-105 transform transition p-4 bg-gray-100 rounded-lg">
+          <p class="text-4xl font-bold text-[#38b6ff]">10K+</p>
+          <p>Lives Touched</p>
+        </div>
+        <div class="hover:scale-105 transform transition p-4 bg-gray-100 rounded-lg">
+          <p class="text-4xl font-bold text-[#38b6ff]">1.5K</p>
+          <p>Women Empowered</p>
+        </div>
+        <div class="hover:scale-105 transform transition p-4 bg-gray-100 rounded-lg">
+          <p class="text-4xl font-bold text-[#38b6ff]">100+</p>
+          <p>Volunteers</p>
+        </div>
       </div>
-      <!-- Member 2 -->
-      <div class="bg-white rounded-xl p-6 shadow-xl hover:scale-105 transition transform duration-300 border-t-4 border-[#38b6ff]">
-        <img src="images/team2.png" alt="Secretary" class="w-full h-48 object-cover rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold">Bhavana Jain</h3>
-        <p class="text-sm text-[#38b6ff] font-medium mb-2">Secretary</p>
-        <details class="text-sm">
-          <summary class="cursor-pointer text-[#38b6ff] underline">Read More</summary>
-          <p class="mt-2">Dedicated to community upliftment and women’s rights advocacy.</p>
-        </details>
-      </div>
-      <!-- Member 3 -->
-      <div class="bg-white rounded-xl p-6 shadow-xl hover:scale-105 transition transform duration-300 border-t-4 border-[#38b6ff]">
-        <img src="images/team3.png" alt="Treasurer" class="w-full h-48 object-cover rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold">Ghanshyam Mahadeo Bhankal</h3>
-        <p class="text-sm text-[#38b6ff] font-medium mb-2">Treasurer</p>
-        <details class="text-sm">
-          <summary class="cursor-pointer text-[#38b6ff] underline">Read More</summary>
-          <p class="mt-2">Ensures financial transparency and growth of the foundation.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Mission & Vision -->
-  <section class="py-12 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-[#38b6ff] mb-6">Mission & Vision</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white shadow-md p-6 rounded-lg border-l-4 border-[#38b6ff]">
-        <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
-        <p>To empower underprivileged communities by fostering education, social awareness, and women empowerment through sustainable initiatives.</p>
+    <!-- Media Scroller -->
+    <section class="bg-gray-100 py-6">
+      <h3 class="text-3xl font-bold text-center text-[#38b6ff] mb-4">Media Highlights</h3>
+      <div class="overflow-x-auto whitespace-nowrap px-6">
+        <img src="https://via.placeholder.com/250x150?text=Event+1" class="inline-block mx-2 rounded-lg shadow-md hover:scale-105 transition" />
+        <img src="https://via.placeholder.com/250x150?text=Event+2" class="inline-block mx-2 rounded-lg shadow-md hover:scale-105 transition" />
+        <img src="https://via.placeholder.com/250x150?text=Event+3" class="inline-block mx-2 rounded-lg shadow-md hover:scale-105 transition" />
+        <img src="https://via.placeholder.com/250x150?text=Event+4" class="inline-block mx-2 rounded-lg shadow-md hover:scale-105 transition" />
       </div>
-      <div class="bg-white shadow-md p-6 rounded-lg border-l-4 border-[#38b6ff]">
-        <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
-        <p>To build an inclusive society where every individual can live with dignity, purpose, and access to opportunity.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Impact Stats -->
-  <section class="bg-[#38b6ff] text-white py-12 px-6">
-    <h2 class="text-3xl font-bold text-center mb-6">Our Impact</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center max-w-6xl mx-auto">
-      <div>
-        <p class="text-4xl font-bold animate-pulse">10K+</p>
-        <p>Meals Served</p>
-      </div>
-      <div>
-        <p class="text-4xl font-bold animate-bounce">500+</p>
-        <p>Women Empowered</p>
-      </div>
-      <div>
-        <p class="text-4xl font-bold animate-pulse">150+</p>
-        <p>Educational Drives</p>
-      </div>
-      <div>
-        <p class="text-4xl font-bold animate-bounce">50+</p>
-        <p>Volunteers</p>
-      </div>
-    </div>
-  </section>
+    <!-- Join Us Section -->
+    <section class="bg-[#38b6ff] text-white p-10 text-center">
+      <h3 class="text-3xl font-bold mb-4">Join Our Movement</h3>
+      <p class="text-lg mb-6">Be a part of the change. Volunteer or support our mission today!</p>
+      <a href="#" class="bg-white text-[#38b6ff] font-semibold py-2 px-4 rounded-full hover:bg-gray-200 transition">Get Involved</a>
+    </section>
 
-  <!-- Join Us Call to Action -->
-  <section class="py-12 px-6 bg-white text-center">
-    <h2 class="text-3xl font-bold text-[#38b6ff] mb-4">Join Us</h2>
-    <p class="text-lg mb-6">Be a part of our mission to transform lives and uplift communities.</p>
-    <a href="#" class="bg-[#38b6ff] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-500 transition">Get Involved</a>
-  </section>
+    <!-- Donation Section -->
+    <section class="p-6 bg-gray-50 text-center">
+      <h3 class="text-3xl font-bold text-[#38b6ff] mb-8">How Can You Support Us?</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition border-t-4 border-[#38b6ff]">
+          <h4 class="text-xl font-bold mb-2">Monetary Donation</h4>
+          <p class="mb-4">Support our cause by contributing funds to our ongoing projects and initiatives.</p>
+          <button class="bg-[#38b6ff] text-white px-4 py-2 rounded hover:bg-blue-600 transition">Donate</button>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition border-t-4 border-[#38b6ff]">
+          <h4 class="text-xl font-bold mb-2">Volunteer</h4>
+          <p class="mb-4">Lend your time and skills to help us drive impactful change in communities.</p>
+          <button class="bg-[#38b6ff] text-white px-4 py-2 rounded hover:bg-blue-600 transition">Join Us</button>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition border-t-4 border-[#38b6ff]">
+          <h4 class="text-xl font-bold mb-2">Sponsor</h4>
+          <p class="mb-4">Partner with us as a sponsor and make a lasting difference together.</p>
+          <button class="bg-[#38b6ff] text-white px-4 py-2 rounded hover:bg-blue-600 transition">Sponsor</button>
+        </div>
+      </div>
+    </section>
 
-  <!-- Media Scroller -->
-  <section class="overflow-hidden py-6 bg-gray-100">
-    <div class="flex gap-6 scroll-loop w-[200%]">
-      <img src="images/media1.jpg" class="h-32 rounded-xl shadow-md" />
-      <img src="images/media2.jpg" class="h-32 rounded-xl shadow-md" />
-      <img src="images/media3.jpg" class="h-32 rounded-xl shadow-md" />
-      <img src="images/media1.jpg" class="h-32 rounded-xl shadow-md" />
-      <img src="images/media2.jpg" class="h-32 rounded-xl shadow-md" />
-      <img src="images/media3.jpg" class="h-32 rounded-xl shadow-md" />
-    </div>
-  </section>
+    <!-- Our Team Section -->
+    <section class="bg-white p-6">
+      <h3 class="text-3xl font-bold text-center text-[#38b6ff] mb-8">Our Team</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Member 1 -->
+        <div onclick="toggleTeam(this)" class="team-tile bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition">
+          <img src="https://via.placeholder.com/150x150?text=Aniket" alt="Aniket" class="rounded-full mx-auto mb-4">
+          <h4 class="text-xl font-bold text-center text-[#38b6ff]">Aniket Ghanshyam Bhankal</h4>
+          <p class="text-center">Chairman</p>
+          <div class="team-tile-content text-sm mt-2 text-gray-600">A dynamic leader and visionary driving CARE's core values since inception.</div>
+        </div>
 
-</body>
+        <!-- Member 2 -->
+        <div onclick="toggleTeam(this)" class="team-tile bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition">
+          <img src="https://via.placeholder.com/150x150?text=Bhavana" alt="Bhavana" class="rounded-full mx-auto mb-4">
+          <h4 class="text-xl font-bold text-center text-[#38b6ff]">Bhavana Jain</h4>
+          <p class="text-center">Secretary</p>
+          <div class="team-tile-content text-sm mt-2 text-gray-600">Handles communication and community engagement with dedication.</div>
+        </div>
+
+        <!-- Member 3 -->
+        <div onclick="toggleTeam(this)" class="team-tile bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition">
+          <img src="https://via.placeholder.com/150x150?text=Ghanshyam" alt="Ghanshyam" class="rounded-full mx-auto mb-4">
+          <h4 class="text-xl font-bold text-center text-[#38b6ff]">Ghanshyam Mahadeo Bhankal</h4>
+          <p class="text-center">Treasurer</p>
+          <div class="team-tile-content text-sm mt-2 text-gray-600">Ensures financial integrity and transparency across all activities.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-500 py-4 bg-gray-100">
+      &copy; 2025 CARE Foundation. All rights reserved.
+    </footer>
+
+    <script>
+      function toggleTeam(el) {
+        el.classList.toggle("expanded");
+      }
+    </script>
+  </body>
 </html>
